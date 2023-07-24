@@ -1,13 +1,3 @@
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-const notesRouter = require('./routes/notes');
-
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json)
-
-app.use('/notes', notesRouter)
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -81,6 +71,7 @@ const handleNoteSave = () => {
     title: noteTitle.value,
     text: noteText.value,
   };
+  console.log(newNote)
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
