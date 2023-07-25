@@ -1,21 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const path = require('path');
 
-// const notesRouter = require('./public/assets/js/routes/notes');
-const notes = require('./notes')
+const notes = require('./notes');
 
-port = 5500
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-// app.use(bodyParser.urlencoded({ extended: false }))
-// app.use(bodyParser.json)
+// Set the correct root directory for serving static files
+app.use(express.static('public'));
 
-// app.get("/", (req, res) => {
-//   
-// })
+app.use('/', notes);
 
-app.use('/', notes)
+const PORT = process.env.PORT || 5001
 
-app.listen(port, () => {
-  console.log(`Listening to port ${port}`)
-})
+app.listen(PORT, () => {
+  console.log(`Listening to port ${PORT}`);
+});
