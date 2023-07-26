@@ -3,6 +3,8 @@ const util = require('util');
 
 // Promise version of fs.readFile
 const readFromFile = util.promisify(fs.readFile);
+const write2File = util.promisify(fs.writeFile);
+
 /**
  *  Function to write data to the JSON file given a destination and some content
  *  @param {string} destination The file you want to write to.
@@ -31,4 +33,4 @@ const readAndAppend = (content, file) => {
   });
 };
 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+module.exports = { readFromFile, writeToFile, readAndAppend, write2File };
