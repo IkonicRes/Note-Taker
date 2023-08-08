@@ -1,4 +1,4 @@
-# Note-Taker
+# You-Noted
 
 ## Table of Contents
  - [Description](#description)
