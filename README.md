@@ -18,6 +18,7 @@ I wanted to showcase my understanding of ExpressJS middleware and create an appl
 ## Installation
 Run "npm install" to install dependencies, then run "node server.js", wherein the server will start on 127.0.0.1:5001
 
+
 ## Usage
 Visit 127.0.0.1:5001 if you are running on a local server, otherwise the application is deployed at heroku ->[here](https://you-noted-a64d6c755938.herokuapp.com/)  
  Click start to begin, add a note if youd like by typing in the note input fields and pressing the save button. Click on any note to navigate to it for viewing, and the red trashcan icon to delete it.
